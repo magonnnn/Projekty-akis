@@ -1,0 +1,399 @@
+        :root {
+            /* hsl (fallback color) */
+            --bg-dark: hsl(239 100% 7%);
+            --bg: hsl(224 100% 8%);
+            --bg-light: hsl(213 100% 9%);
+            --text: hsl(208 100% 96%);
+            --text-muted: hsl(208 76% 70%);
+            --highlight: hsl(203 100% 27%);
+            --border: hsl(207 100% 22%);
+            --border-muted: hsl(215 100% 19%);
+            --primary: hsl(201 100% 53%);
+            --secondary: hsl(39 100% 38%);
+            --danger: hsl(7 100% 66%);
+            --warning: hsl(53 100% 21%);
+            --success: hsl(162 100% 22%);
+            --info: hsl(217 100% 70%);
+            /* oklch */
+            --bg-dark: oklch(0.1 0.1 246);
+            --bg: oklch(0.15 0.1 246);
+            --bg-light: oklch(0.2 0.1 246);
+            --text: oklch(0.96 0.1 246);
+            --text-muted: oklch(0.76 0.1 246);
+            --highlight: oklch(0.5 0.2 246);
+            --border: oklch(0.4 0.2 246);
+            --border-muted: oklch(0.3 0.2 246);
+            --primary: oklch(0.76 0.2 246);
+            --secondary: oklch(0.76 0.2 66);
+            --danger: oklch(0.7 0.2 30);
+            --warning: oklch(0.7 0.2 100);
+            --success: oklch(0.7 0.2 160);
+            --info: oklch(0.7 0.2 260);
+            }
+            body.light {
+            /* hsl (fallback color) */
+            --bg-dark: hsl(208 100% 91%);
+            --bg: hsl(208 100% 96%);
+            --bg-light: hsl(208 100% 100%);
+            --text: hsl(252 100% 13%);
+            --text-muted: hsl(207 100% 22%);
+            --highlight: hsl(207 100% 99%);
+            --border: hsl(201 100% 34%);
+            --border-muted: hsl(200 100% 44%);
+            --primary: hsl(207 100% 22%);
+            --secondary: hsl(24 100% 17%);
+            --danger: hsl(4 99% 37%);
+            --warning: hsl(50 100% 12%);
+            --success: hsl(159 100% 9%);
+            --info: hsl(215 95% 42%);
+            /* oklch */
+            --bg-dark: oklch(0.92 0.1 246);
+            --bg: oklch(0.96 0.1 246);
+            --bg-light: oklch(1 0.1 246);
+            --text: oklch(0.15 0.2 246);
+            --text-muted: oklch(0.4 0.2 246);
+            --highlight: oklch(1 0.2 246);
+            --border: oklch(0.6 0.2 246);
+            --border-muted: oklch(0.7 0.2 246);
+            --primary: oklch(0.4 0.2 246);
+            --secondary: oklch(0.4 0.2 66);
+            --danger: oklch(0.5 0.2 30);
+            --warning: oklch(0.5 0.2 100);
+            --success: oklch(0.5 0.2 160);
+            --info: oklch(0.5 0.2 260);
+
+            /*my own variables*/
+            --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        /*CARD STYLES--------------------------------------------------------------------------------*/
+
+        .card {
+             background-color: var(--bg);
+             border: 1px solid var(--border);
+             border-top-color: var(--highlight);
+             border-radius: 1rem;
+             box-shadow: var(--shadow);
+             width: 100%;
+             height: 40vh;
+             color: var(--text);
+             padding: 20px;
+             margin: 10px;
+        }
+
+        .card > button {
+            background-color: var(--primary);
+            padding: 10px;
+            border-radius: 1rem;
+            border: none;
+            
+        }
+
+        .card > button:hover {
+            background-color: var(--secondary);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
+
+        .cards {
+            display: flex;
+        }
+
+        /*CONTENT STYLES-------------------------------------------------------------------------------*/
+
+        .content {
+            margin: 20px;
+        }
+
+        h1 {
+            color: var(--text);
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 100;
+        }
+
+        content > h1, h2, p {
+            margin: 10px 0px;
+        }
+
+        /*MODAL STYLES / MAINLY HEADER-------------------------------------------------------------------------------*/  
+
+        .header {
+            margin-bottom: 50px;
+        }
+
+        .modal-background {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 3;
+            visibility: hidden;
+        }
+
+        .modal {
+            position: fixed;
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-top-color: var(--highlight);
+            border-radius: 1rem;
+            width: 80vw;
+            height: 80vh;
+            left: 10vw;
+            top: 10vh;
+            z-index: 4;
+
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+
+            padding: 16px;
+            overflow: hidden;
+        }
+
+        #closeBtn {
+            color: var(--primary);
+            font-size: 2rem;
+            float: right;
+            margin: 10px;
+        }
+
+        #closeBtn:hover {
+            cursor: pointer;
+            color: var(--secondary);
+        }
+
+        #closeBtn2 {
+            color: var(--primary);
+            font-size: 2rem;
+            float: right;
+            margin: 10px;
+        }
+
+        #closeBtn2:hover {
+            cursor: pointer;
+            color: var(--secondary);
+        }
+
+        #closeBtn3 {
+            color: var(--primary);
+            font-size: 2rem;
+            float: right;
+            margin: 10px;
+        }
+
+        #closeBtn3:hover {
+            cursor: pointer;
+            color: var(--secondary);
+        }
+
+        /*MODAL CONTENT STYLES-------------------------------------------------------------------------------*/
+
+        .animation-attribute-card {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            color: var(--text-muted);
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        .animation-attribute-card:hover {
+            cursor: pointer;
+            background: linear-gradient(var(--bg-light), var(--bg));
+        }
+
+        .modal-card-buttons {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-header {
+            display: flex;
+            flex-direction: row;
+            background-color: var(--bg-light);
+            border-radius: 1rem 1rem 0 0 ;
+        }
+
+        .modal-content1 {
+            display: none; /*--------------------------------------------------------------------------------------------------------------------------------*/
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+
+        .modal-content2 {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+
+        div[id^="modalContent"] {
+            color: var(--text);
+            margin: 0;
+            padding: 0.5rem 0;
+            overflow-y: auto;
+            flex: 1 1 auto;
+            min-height: 0;
+            
+        }
+
+        .required-property {
+            color: var(--danger);
+        }
+
+        div[id^="modalContent"] > img{
+            border: 1px solid var(--border-muted);
+            border-radius: 1rem;
+        }
+
+        div[id^="modalContent"]  li{
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-muted);
+            border-top-color: var(--highlight);
+            padding: 10px;
+            border-radius: 1rem;
+            width: 50%;
+            margin: 20px 0px;
+        }
+
+        .modal-header {
+            flex: 0 0 auto;
+        }
+
+        
+        button[id$="PlayBtn"] {
+            height: fit-content;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            color: buttontext;
+            margin: 0px 10px;
+            text-align: center;
+            background-color: var(--primary);
+            margin: 10px 0px;
+        }
+
+        button[id$="PlayBtn"]:hover {
+            cursor: pointer;
+            background-color: var(--secondary);
+        }
+
+        .transform-attribute-card {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            color: var(--text-muted);
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        .transform-attribute-card:hover {
+            cursor: pointer;
+            background: linear-gradient(var(--bg-light), var(--bg));
+        }
+
+
+        /*KEYFRAMES-------------------------------------------------------------------------------*/
+
+        @keyframes basic-animation {
+            0% {
+                transform: translateX(0px)
+            } 100% {
+                transform: translateX(30vw);
+            }
+        }
+
+        @keyframes fill-mode-animation {
+            from {
+                transform: translate(0px); 
+                background-color: yellow;
+            } to {
+                transform: translate(30vw);
+                background-color: red;
+            }
+        }
+
+        @keyframes skewAnim {
+            from {
+                transform: skew(0deg, 0deg);
+            }to {
+                transform: skew(20deg, 20deg);
+            }
+        }
+
+        @keyframes skewXAnim {
+            from {
+                transform: skewX(0deg);
+            } to {
+                transform: skewX(20deg);
+            }
+        }
+
+        @keyframes skewYAnim {
+            from {
+                transform: skewY(0deg);
+            } to {
+                transform: skewY(20deg);
+            }
+        }
+
+        /*UNNAMED STYLES-------------------------------------------------------------------------------*/
+
+        div[class^="square"] {
+            width: 50px;
+            height: 50px;
+            background-color: var(--success);
+        }
+
+        
+        .code {
+            color: var(--highlight);
+        }
+
+        /*ANIMATIONS-----------------------------------------------------------------------------------*/
+
+        .squareSkew1 {
+            animation: skewAnim 2s linear 2s 1 normal forwards;
+        }
+
+        .squareSkew2 {
+            animation: skewXAnim 2s linear 2s 1 normal forwards;
+        }
+
+        .squareSkew3 {
+            animation: skewYAnim 2s linear 2s 1 normal forwards;
+        }

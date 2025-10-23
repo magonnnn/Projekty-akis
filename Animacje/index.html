@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js_files/direction_handler.js" defer></script>
+    <script src="./js_files/fill_mode_handler.js" defer></script>
+    <script src="./js_files/modal_handler.js" defer></script>
+    <script src="./js_files/animation_modal_handler.js" defer></script>
+    <script src="./js_files/transform_modal_handler.js" defer></script>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>Animacje CSS</h1>
+            <p>Czyli jak zrobić żeby coś się ruszało używając tylko HTMLa i CSSa</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Właściwość animation</h3>
+                <p>Pozwala na stopniową zmianę stylu</p>
+                <button id="btn1">Zobacz</button>
+            </div>
+            <div class="card">
+                <h3>Właściwość transform</h3>
+                <p>Ustala jak będzie wyglądała animacja</p>
+                <button id="btn2">Zobacz</button>
+            </div>
+            <div class="card">
+                <h3>@keyframes</h3>
+                <p>Zapis kluczowych klatek w animacji</p>
+                <button id="btn3">Zobacz</button>
+            </div>
+            <div class="card">
+                <h3>Zaliczenie</h3>
+                <p>Zadanie do zrobienia na ocenę</p>
+                <button id="btn4">Zobacz</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-background" id="fullModal">
+        <div class="modal">
+            <div class="modal-content1">
+                <div class="modal-header">
+                    <div class="modal-card-buttons">
+                        <div class="animation-attribute-card">name</div>
+                        <div class="animation-attribute-card">duration</div>
+                        <div class="animation-attribute-card">timing-function</div>
+                        <div class="animation-attribute-card">delay</div>
+                        <div class="animation-attribute-card">iteration-count</div>
+                        <div class="animation-attribute-card">direction</div>
+                        <div class="animation-attribute-card">fill-mode</div>
+                    </div>
+                    <span id="closeBtn">&#10006</span>
+                </div>
+                <div id="modalContent1"></div>
+            </div>
+            <div class="modal-content2">
+                <div class="modal-header">
+                    <div class="modal-card-buttons">
+                        <div class="transform-attribute-card">translate</div>
+                        <div class="transform-attribute-card">scale</div>
+                        <div class="transform-attribute-card">rotate</div>
+                        <div class="transform-attribute-card">skew</div>
+                        <div class="transform-attribute-card">matrix</div>
+                    </div>
+                    <span id="closeBtn2">&#10006</span>
+                </div>
+                <div id="modalContent2">
+                    <h2>Właściwość <span class="code">rotate()</span> obraca element</h2>
+                    <p>Przykładowe użycie:</p>
+                    <img src="./ss_folder/skewEU.png" alt="Przykładowe użycie skew">
+                    <ul>
+                        <li>
+                            <h3>rotate()</h3>
+                            <p>obraca element</p>
+                            <div class="squareSkew1"></div>
+                        </li>
+                        <li>
+                            <h3>rotateX()</h3>
+                            <p>krzywi element na osi X</p>
+                            <div class="squareSkew2"></div>
+                        </li>
+                        <li>
+                            <h3>rotateY()</h3>
+                            <p>krzywi element na osi Y</p>
+                            <div class="squareSkew3"></div>
+                        </li>
+                        <li>
+                            <h3>rotate3d()</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-content3">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
