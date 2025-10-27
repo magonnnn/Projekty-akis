@@ -1,11 +1,11 @@
 let animationContentObj
 
-async function loadModalContent() {
+async function loadAnimModalContent() {
     let text = await (await fetch("./json_files/animation_info.json")).text();
     animationContentObj = JSON.parse(text);
 }
 
-loadModalContent()
+loadAnimModalContent()
 
 //modal display eventlistener
 const animationBtn = document.getElementById("animationModalBtn")
@@ -29,7 +29,9 @@ animationBtn.addEventListener("click", () => {
 const animationCloseBtn = document.getElementById("closeBtn")
 
 animationCloseBtn.addEventListener("click", () => {
+    const modalContent = document.getElementById("modal-content1")
     const modal = document.getElementById("fullModal")
+    modalContent.style.display = "none"
     modal.style.visibility = "hidden"
 })
 

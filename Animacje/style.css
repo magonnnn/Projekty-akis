@@ -326,7 +326,18 @@
             background: linear-gradient(var(--bg-light), var(--bg));
         }
 
+        .translateBox  li {
+            display: flex;
+            flex-direction: row;
+        }
 
+        .translateBox  li > .mergeBox {
+            width: 50%;
+        }
+
+        .translateBox li > div[class*="Square"] {
+            align-self: center;
+        }
 
         /*KEYFRAMES-------------------------------------------------------------------------------*/
 
@@ -372,12 +383,95 @@
             }
         }
 
+        @keyframes rotateAnim {
+            from {
+                transform: rotate(0deg);
+            } to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotateXAnim {
+            from {
+                transform: rotateX(0deg);
+            } to {
+                transform: rotateX(360deg);
+            }
+        }
+
+        @keyframes rotateYAnim {
+            from {
+                transform: rotateY(0deg);
+            } to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes rotateZAnim {
+            from {
+                transform: rotateZ(0deg);
+            } to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes rotate3DAnim {
+            from {
+                transform: rotate3d(0deg,0deg,0deg);
+            } to {
+                transform: rotate3d(1,1,1,360deg);
+            }
+        }
+
+        @keyframes translate {
+            from {
+                transform: translate(0px,0px);
+            } to {
+                transform: translate(10vw, 15px);
+            }
+        }
+
+        @keyframes translateX {
+            from {
+                transform: translateX(0px);
+            } to {
+                transform: translateX(10vw);
+            }
+        }
+
+        @keyframes translateY {
+            from {
+                transform: translateY(0px);
+            } to {
+                transform: translateY(15px);
+            }
+        }
+
+        @keyframes translateZ {
+            from {
+                transform: translateZ(0px);
+            } to { 
+                transform: perspective(200px) translateZ(-200px);
+            }
+        }
+
+        @keyframes translate3D {
+            from {
+                transform: translate3d(0px,0px,0px);
+            } to {
+                transform: perspective(100px) translate3d(10vw, 15px, -100px);
+            }
+        }
+
         /*UNNAMED STYLES-------------------------------------------------------------------------------*/
 
-        div[class^="square"] {
+        div[class*="square"], div[class*="Square"] {
             width: 50px;
             height: 50px;
             background-color: var(--success);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         
@@ -386,15 +480,3 @@
         }
 
         /*ANIMATIONS-----------------------------------------------------------------------------------*/
-
-        .squareSkew1 {
-            animation: skewAnim 2s linear 2s 1 normal forwards;
-        }
-
-        .squareSkew2 {
-            animation: skewXAnim 2s linear 2s 1 normal forwards;
-        }
-
-        .squareSkew3 {
-            animation: skewYAnim 2s linear 2s 1 normal forwards;
-        }

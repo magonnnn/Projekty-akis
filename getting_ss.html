@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @keyframes test {
+            from {
+                transform: translateZ(0px);
+            } to {
+                transform: perspective(200px) translateZ(-200px);
+            }
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            animation: test 5s 1 2s;
+        }
     </style>
 </head>
 <body>
-
+    <div class="square"></div>
 </body>
 </html>
