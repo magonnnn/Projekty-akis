@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./js_files/direction_handler.js" defer></script>
-    <script src="./js_files/fill_mode_handler.js" defer></script>
-    <script src="./js_files/modal_handler.js" defer></script>
-    <script src="./js_files/animation_modal_handler.js" defer></script>
-    <script src="./js_files/transform_modal_handler.js" defer></script>
 </head>
 <body>
     <div class="content">
@@ -21,43 +16,43 @@
             <div class="card">
                 <h3>Właściwość animation</h3>
                 <p>Pozwala na stopniową zmianę stylu</p>
-                <button id="btn1">Zobacz</button>
+                <button id="animationModalBtn">Zobacz</button>
             </div>
             <div class="card">
                 <h3>Właściwość transform</h3>
                 <p>Ustala jak będzie wyglądała animacja</p>
-                <button id="btn2">Zobacz</button>
+                <button id="transformModalBtn">Zobacz</button>
             </div>
             <div class="card">
                 <h3>@keyframes</h3>
                 <p>Zapis kluczowych klatek w animacji</p>
-                <button id="btn3">Zobacz</button>
+                <button id="keyframesModalBtn">Zobacz</button>
             </div>
             <div class="card">
                 <h3>Zaliczenie</h3>
                 <p>Zadanie do zrobienia na ocenę</p>
-                <button id="btn4">Zobacz</button>
+                <button id="zaliczenieModalBtn">Zobacz</button>
             </div>
         </div>
     </div>
     <div class="modal-background" id="fullModal">
         <div class="modal">
-            <div class="modal-content1">
+            <div class="modal-content1" id="modal-content1">
                 <div class="modal-header">
                     <div class="modal-card-buttons">
-                        <div class="animation-attribute-card">name</div>
-                        <div class="animation-attribute-card">duration</div>
-                        <div class="animation-attribute-card">timing-function</div>
-                        <div class="animation-attribute-card">delay</div>
-                        <div class="animation-attribute-card">iteration-count</div>
-                        <div class="animation-attribute-card">direction</div>
-                        <div class="animation-attribute-card">fill-mode</div>
+                        <div class="animation-attribute-card" id="nameBtn">name</div>
+                        <div class="animation-attribute-card" id="durationBtn">duration</div>
+                        <div class="animation-attribute-card" id="timingFuncBtn">timing-function</div>
+                        <div class="animation-attribute-card" id="delayBtn">delay</div>
+                        <div class="animation-attribute-card" id="iterationCountBtn">iteration-count</div>
+                        <div class="animation-attribute-card" id="directionBtn">direction</div>
+                        <div class="animation-attribute-card" id="fillModeBtn">fill-mode</div>
                     </div>
                     <span id="closeBtn">&#10006</span>
                 </div>
                 <div id="modalContent1"></div>
             </div>
-            <div class="modal-content2">
+            <div class="modal-content2" id="modal-content2">
                 <div class="modal-header">
                     <div class="modal-card-buttons">
                         <div class="transform-attribute-card">translate</div>
@@ -76,32 +71,27 @@
                         <li>
                             <h3>rotate()</h3>
                             <p>obraca element</p>
-                            <button id="rotatePlayBtn">animacja</button>
-                            <div class="squareRotate1"></div>
+                            <div class="squareRotate1" style="transform: rotate(30deg); transition: 2s;">test</div>
                         </li>
                         <li>
                             <h3>rotateX()</h3>
                             <p>obraca element w osi X</p>
-                            <button id="rotateXPlayBtn">animacja</button>
-                            <div class="squareRotate2"></div>
+                            <div class="squareRotate2" style="transform: rotateX(30deg); transition: 2s;">test</div>
                         </li>
                         <li>
                             <h3>rotateY()</h3>
                             <p>obraca element w osi Y</p>
-                            <button id="rotateYPlayBtn">animacja</button>
-                            <div class="squareRotate3"></div>
+                            <div class="squareRotate3" style="transform: rotateY(30deg); transition: 2s;">test</div>
                         </li>
                         <li>
                             <h3>rotateZ()</h3>
                             <p>obraca element w osi Z</p>
-                            <button id="rotateZPlayBtn">animacja</button>
-                            <div class="squareRotate4"></div>
+                            <div class="squareRotate4" style="transform: rotateZ(30deg); transition: 2s;">test</div>
                         </li>
                         <li>
                             <h3>rotate3d()</h3>
                             <p>obraca element w osiach X, Y, Z</p>
-                            <button id="rotate3DPlayBtn">animacja</button>
-                            <div class="squareRotate5"></div>
+                            <div class="squareRotate5" style="transform: rotate3d(30deg, 30deg, 30deg); transition: 2s;">test</div>
                         </li>
                     </ul>
                 </div>
@@ -111,5 +101,7 @@
             </div>
         </div>
     </div>
+    <script src="./js_files_new/animation_modal_handler.js" defer></script>
+    <script src="./js_files_new/transform_modal_handler.js" defer></script>
 </body>
 </html>

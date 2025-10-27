@@ -246,14 +246,14 @@
         }
 
         .modal-content1 {
-            display: none; /*--------------------------------------------------------------------------------------------------------------------------------*/
+            display: flex; /*--------------------------------------------------------------------------------------------------------------------------------*/
             flex-direction: column;
             flex: 1 1 auto;
             min-height: 0;
         }
 
         .modal-content2 {
-            display: flex;
+            display: none;
             flex-direction: column;
             flex: 1 1 auto;
             min-height: 0;
@@ -325,6 +325,7 @@
             cursor: pointer;
             background: linear-gradient(var(--bg-light), var(--bg));
         }
+
 
 
         /*KEYFRAMES-------------------------------------------------------------------------------*/
