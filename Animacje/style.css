@@ -273,9 +273,10 @@
             color: var(--danger);
         }
 
-        div[id^="modalContent"] > img{
+        img {
             border: 1px solid var(--border-muted);
             border-radius: 1rem;
+            margin: 1em
         }
 
         div[id^="modalContent"]  li{
@@ -336,6 +337,42 @@
         }
 
         .translateBox li > div[class*="Square"] {
+            align-self: center;
+        }
+
+        .scaleBox li {
+            display: flex;
+        }
+
+        .scaleBox li > .mergeBox {
+            width: 50%;
+        }
+
+        .scaleBox li > div[class*="Square"] {
+            align-self: center;
+        }
+
+        .skewBox li {
+            display: flex;
+        }
+
+        .skewBox li > .mergeBox {
+            width: 50%;
+        }
+
+        .skewBox li > div[class*="Skew"] {
+            align-self: center;
+        }
+
+        .matrixBox li {
+            display: flex;
+        }
+
+        .matrixBox li > .mergeBox {
+            width: 50%;
+        }
+
+        .matrixBox li > div[class*="matrix"] {
             align-self: center;
         }
 
@@ -460,6 +497,59 @@
                 transform: translate3d(0px,0px,0px);
             } to {
                 transform: perspective(100px) translate3d(10vw, 15px, -100px);
+            }
+        }
+
+        @keyframes scale {
+            from {
+                background-color: yellow;
+            } to {
+                transform: scale(1.3, 1.3);
+                background-color: red;
+            }
+        }
+
+        @keyframes scaleX {
+            from {
+                background-color: yellow;
+            } to {
+                transform: scaleX(1.3);
+                background-color: red;
+            }
+        }
+
+        @keyframes scaleY {
+            from {
+                background-color: yellow;
+            } to {
+                transform: scaleY(1.3);
+                background-color: red;
+            }
+        }
+
+        @keyframes scaleZ {
+            from {
+                background-color: yellow;
+            } to {
+                transform: scaleZ(1.3);
+                background-color: red;
+            }
+        }
+
+        @keyframes scale3D {
+            from {
+                background-color: yellow;
+            } to {
+                transform: scale3d(1.3, 1.3, 10) rotate3d(1,1,0,30deg);
+                background-color: red;
+            }
+        }
+
+        @keyframes matrix {
+            from {
+
+            } to {
+                transform: matrix(1.1, -0.3, 1.1, 1, 50, 0);
             }
         }
 

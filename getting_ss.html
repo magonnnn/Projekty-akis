@@ -7,9 +7,9 @@
     <style>
         @keyframes test {
             from {
-                transform: translateZ(0px);
+                transform: scale(0)
             } to {
-                transform: perspective(200px) translateZ(-200px);
+                transform: scale(1.1)
             }
         }
 
@@ -17,7 +17,15 @@
             width: 50px;
             height: 50px;
             background-color: black;
-            animation: test 5s 1 2s;
+            animation: matrix 5s 1 2s;
+        }
+
+        @keyframes test {
+            from {
+
+            } to {
+                transform: matrix(1, -0.3, 0, 1, 0, 50);
+            }
         }
     </style>
 </head>
