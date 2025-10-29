@@ -18,6 +18,8 @@ transformBtn.addEventListener("click", () => {
     const modalContent4 = document.getElementById("modal-content4")
 
     modalContent.style.display = "none"
+    modalContent3.style.display = "none"
+    modalContent4.style.display = "none"
 
     modal.style.visibility = "visible"
     modalContent2.style.display = "flex"

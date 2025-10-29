@@ -1,73 +1,70 @@
         :root {
-            /* hsl (fallback color) */
-            --bg-dark: hsl(239 100% 7%);
-            --bg: hsl(224 100% 8%);
-            --bg-light: hsl(213 100% 9%);
-            --text: hsl(208 100% 96%);
-            --text-muted: hsl(208 76% 70%);
-            --highlight: hsl(203 100% 27%);
-            --border: hsl(207 100% 22%);
-            --border-muted: hsl(215 100% 19%);
-            --primary: hsl(201 100% 53%);
-            --secondary: hsl(39 100% 38%);
-            --danger: hsl(7 100% 66%);
-            --warning: hsl(53 100% 21%);
-            --success: hsl(162 100% 22%);
-            --info: hsl(217 100% 70%);
-            /* oklch */
-            --bg-dark: oklch(0.1 0.1 246);
-            --bg: oklch(0.15 0.1 246);
-            --bg-light: oklch(0.2 0.1 246);
-            --text: oklch(0.96 0.1 246);
-            --text-muted: oklch(0.76 0.1 246);
-            --highlight: oklch(0.5 0.2 246);
-            --border: oklch(0.4 0.2 246);
-            --border-muted: oklch(0.3 0.2 246);
-            --primary: oklch(0.76 0.2 246);
-            --secondary: oklch(0.76 0.2 66);
-            --danger: oklch(0.7 0.2 30);
-            --warning: oklch(0.7 0.2 100);
-            --success: oklch(0.7 0.2 160);
-            --info: oklch(0.7 0.2 260);
-            }
-            body.light {
-            /* hsl (fallback color) */
-            --bg-dark: hsl(208 100% 91%);
-            --bg: hsl(208 100% 96%);
-            --bg-light: hsl(208 100% 100%);
-            --text: hsl(252 100% 13%);
-            --text-muted: hsl(207 100% 22%);
-            --highlight: hsl(207 100% 99%);
-            --border: hsl(201 100% 34%);
-            --border-muted: hsl(200 100% 44%);
-            --primary: hsl(207 100% 22%);
-            --secondary: hsl(24 100% 17%);
-            --danger: hsl(4 99% 37%);
-            --warning: hsl(50 100% 12%);
-            --success: hsl(159 100% 9%);
-            --info: hsl(215 95% 42%);
-            /* oklch */
-            --bg-dark: oklch(0.92 0.1 246);
-            --bg: oklch(0.96 0.1 246);
-            --bg-light: oklch(1 0.1 246);
-            --text: oklch(0.15 0.2 246);
-            --text-muted: oklch(0.4 0.2 246);
-            --highlight: oklch(1 0.2 246);
-            --border: oklch(0.6 0.2 246);
-            --border-muted: oklch(0.7 0.2 246);
-            --primary: oklch(0.4 0.2 246);
-            --secondary: oklch(0.4 0.2 66);
-            --danger: oklch(0.5 0.2 30);
-            --warning: oklch(0.5 0.2 100);
-            --success: oklch(0.5 0.2 160);
-            --info: oklch(0.5 0.2 260);
-
-            /*my own variables*/
-            --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
+        /* hsl (fallback color) */
+        --bg-dark: hsl(79 100% 1%);
+        --bg: hsl(77 100% 2%);
+        --bg-light: hsl(73 77% 5%);
+        --text: hsl(76 87% 86%);
+        --text-muted: hsl(75 29% 61%);
+        --highlight: hsl(74 35% 31%);
+        --border: hsl(72 57% 19%);
+        --border-muted: hsl(70 100% 8%);
+        --primary: hsl(75 35% 59%);
+        --secondary: hsl(261 59% 77%);
+        --danger: hsl(9 42% 65%);
+        --warning: hsl(51 29% 53%);
+        --success: hsl(148 27% 56%);
+        --info: hsl(217 46% 66%);
+        /* oklch */
+        --bg-dark: oklch(0.1 0.04 120);
+        --bg: oklch(0.15 0.04 120);
+        --bg-light: oklch(0.2 0.04 120);
+        --text: oklch(0.96 0.08 120);
+        --text-muted: oklch(0.76 0.08 120);
+        --highlight: oklch(0.5 0.08 120);
+        --border: oklch(0.4 0.08 120);
+        --border-muted: oklch(0.3 0.08 120);
+        --primary: oklch(0.76 0.1 120);
+        --secondary: oklch(0.76 0.1 300);
+        --danger: oklch(0.7 0.08 30);
+        --warning: oklch(0.7 0.08 100);
+        --success: oklch(0.7 0.08 160);
+        --info: oklch(0.7 0.08 260);
+        }
+        body.light {
+        /* hsl (fallback color) */
+        --bg-dark: hsl(77 40% 86%);
+        --bg: hsl(77 63% 91%);
+        --bg-light: hsl(77 100% 96%);
+        --text: hsl(78 100% 2%);
+        --text-muted: hsl(72 57% 19%);
+        --highlight: hsl(76 100% 92%);
+        --border: hsl(75 26% 42%);
+        --border-muted: hsl(75 24% 54%);
+        --primary: hsl(69 100% 14%);
+        --secondary: hsl(264 34% 34%);
+        --danger: hsl(8 32% 41%);
+        --warning: hsl(51 46% 30%);
+        --success: hsl(150 37% 33%);
+        --info: hsl(217 34% 43%);
+        /* oklch */
+        --bg-dark: oklch(0.92 0.04 120);
+        --bg: oklch(0.96 0.04 120);
+        --bg-light: oklch(1 0.04 120);
+        --text: oklch(0.15 0.08 120);
+        --text-muted: oklch(0.4 0.08 120);
+        --highlight: oklch(1 0.08 120);
+        --border: oklch(0.6 0.08 120);
+        --border-muted: oklch(0.7 0.08 120);
+        --primary: oklch(0.4 0.1 120);
+        --secondary: oklch(0.4 0.1 300);
+        --danger: oklch(0.5 0.08 30);
+        --warning: oklch(0.5 0.08 100);
+        --success: oklch(0.5 0.08 160);
+        --info: oklch(0.5 0.08 260);
         }
 
         body {
-            background-color: var(--bg-dark);
+            background: var(--bg-dark);
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             margin: 0 auto;
             box-sizing: border-box;
@@ -93,7 +90,7 @@
             padding: 10px;
             border-radius: 1rem;
             border: none;
-            
+            color: var(--bg-dark);
         }
 
         .card > button:hover {
@@ -246,13 +243,20 @@
         }
 
         .modal-content1 {
-            display: flex; /*--------------------------------------------------------------------------------------------------------------------------------*/
+            display: none; /*--------------------------------------------------------------------------------------------------------------------------------*/
             flex-direction: column;
             flex: 1 1 auto;
             min-height: 0;
         }
 
         .modal-content2 {
+            display: none;
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+
+        .modal-content3 {
             display: none;
             flex-direction: column;
             flex: 1 1 auto;
@@ -323,6 +327,23 @@
         }
 
         .transform-attribute-card:hover {
+            cursor: pointer;
+            background: linear-gradient(var(--bg-light), var(--bg));
+        }
+
+        .keyframes-attribute-card {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            color: var(--text-muted);
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        
+        .keyframes-attribute-card:hover {
             cursor: pointer;
             background: linear-gradient(var(--bg-light), var(--bg));
         }
@@ -566,7 +587,7 @@
 
         
         .code {
-            color: var(--highlight);
+            color: var(--highlight)
         }
 
         /*ANIMATIONS-----------------------------------------------------------------------------------*/
