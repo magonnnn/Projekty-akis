@@ -1,67 +1,67 @@
-        :root {
-        /* hsl (fallback color) */
-        --bg-dark: hsl(79 100% 1%);
-        --bg: hsl(77 100% 2%);
-        --bg-light: hsl(73 77% 5%);
-        --text: hsl(76 87% 86%);
-        --text-muted: hsl(75 29% 61%);
-        --highlight: hsl(74 35% 31%);
-        --border: hsl(72 57% 19%);
-        --border-muted: hsl(70 100% 8%);
-        --primary: hsl(75 35% 59%);
-        --secondary: hsl(261 59% 77%);
-        --danger: hsl(9 42% 65%);
-        --warning: hsl(51 29% 53%);
-        --success: hsl(148 27% 56%);
-        --info: hsl(217 46% 66%);
-        /* oklch */
-        --bg-dark: oklch(0.1 0.04 120);
-        --bg: oklch(0.15 0.04 120);
-        --bg-light: oklch(0.2 0.04 120);
-        --text: oklch(0.96 0.08 120);
-        --text-muted: oklch(0.76 0.08 120);
-        --highlight: oklch(0.5 0.08 120);
-        --border: oklch(0.4 0.08 120);
-        --border-muted: oklch(0.3 0.08 120);
-        --primary: oklch(0.76 0.1 120);
-        --secondary: oklch(0.76 0.1 300);
-        --danger: oklch(0.7 0.08 30);
-        --warning: oklch(0.7 0.08 100);
-        --success: oklch(0.7 0.08 160);
-        --info: oklch(0.7 0.08 260);
-        }
-        body.light {
-        /* hsl (fallback color) */
-        --bg-dark: hsl(77 40% 86%);
-        --bg: hsl(77 63% 91%);
-        --bg-light: hsl(77 100% 96%);
-        --text: hsl(78 100% 2%);
-        --text-muted: hsl(72 57% 19%);
-        --highlight: hsl(76 100% 92%);
-        --border: hsl(75 26% 42%);
-        --border-muted: hsl(75 24% 54%);
-        --primary: hsl(69 100% 14%);
-        --secondary: hsl(264 34% 34%);
-        --danger: hsl(8 32% 41%);
-        --warning: hsl(51 46% 30%);
-        --success: hsl(150 37% 33%);
-        --info: hsl(217 34% 43%);
-        /* oklch */
-        --bg-dark: oklch(0.92 0.04 120);
-        --bg: oklch(0.96 0.04 120);
-        --bg-light: oklch(1 0.04 120);
-        --text: oklch(0.15 0.08 120);
-        --text-muted: oklch(0.4 0.08 120);
-        --highlight: oklch(1 0.08 120);
-        --border: oklch(0.6 0.08 120);
-        --border-muted: oklch(0.7 0.08 120);
-        --primary: oklch(0.4 0.1 120);
-        --secondary: oklch(0.4 0.1 300);
-        --danger: oklch(0.5 0.08 30);
-        --warning: oklch(0.5 0.08 100);
-        --success: oklch(0.5 0.08 160);
-        --info: oklch(0.5 0.08 260);
-        }
+:root {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(336 0% 1%);
+  --bg: hsl(300 0% 4%);
+  --bg-light: hsl(0 0% 9%);
+  --text: hsl(300 0% 95%);
+  --text-muted: hsl(300 0% 69%);
+  --highlight: hsl(330 0% 39%);
+  --border: hsl(0 0% 28%);
+  --border-muted: hsl(300 0% 18%);
+  --primary: hsl(0 66% 75%);
+  --secondary: hsl(183 52% 57%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+  /* oklch */
+  --bg-dark: oklch(0.1 0 20);
+  --bg: oklch(0.15 0 20);
+  --bg-light: oklch(0.2 0 20);
+  --text: oklch(0.96 0 20);
+  --text-muted: oklch(0.76 0 20);
+  --highlight: oklch(0.5 0 20);
+  --border: oklch(0.4 0 20);
+  --border-muted: oklch(0.3 0 20);
+  --primary: oklch(0.76 0.1 20);
+  --secondary: oklch(0.76 0.1 200);
+  --danger: oklch(0.7 0.05 30);
+  --warning: oklch(0.7 0.05 100);
+  --success: oklch(0.7 0.05 160);
+  --info: oklch(0.7 0.05 260);
+}
+body.light {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(0 0% 90%);
+  --bg: hsl(300 0% 95%);
+  --bg-light: hsl(300 50% 100%);
+  --text: hsl(300 0% 4%);
+  --text-muted: hsl(0 0% 28%);
+  --highlight: hsl(300 50% 100%);
+  --border: hsl(NaN 0% 50%);
+  --border-muted: hsl(340 0% 62%);
+  --primary: hsl(357 44% 32%);
+  --secondary: hsl(183 100% 9%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+  /* oklch */
+  --bg-dark: oklch(0.92 0 20);
+  --bg: oklch(0.96 0 20);
+  --bg-light: oklch(1 0 20);
+  --text: oklch(0.15 0 20);
+  --text-muted: oklch(0.4 0 20);
+  --highlight: oklch(1 0 20);
+  --border: oklch(0.6 0 20);
+  --border-muted: oklch(0.7 0 20);
+  --primary: oklch(0.4 0.1 20);
+  --secondary: oklch(0.4 0.1 200);
+  --danger: oklch(0.5 0.05 30);
+  --warning: oklch(0.5 0.05 100);
+  --success: oklch(0.5 0.05 160);
+  --info: oklch(0.5 0.05 260);
+}
 
         body {
             background: var(--bg-dark);
@@ -173,41 +173,18 @@
             overflow: hidden;
         }
 
-        #closeBtn {
+        span[id^="closeBtn"] {
             color: var(--primary);
             font-size: 2rem;
             float: right;
             margin: 10px;
         }
 
-        #closeBtn:hover {
+        span[id^="closeBtn"]:hover {
             cursor: pointer;
             color: var(--secondary);
         }
 
-        #closeBtn2 {
-            color: var(--primary);
-            font-size: 2rem;
-            float: right;
-            margin: 10px;
-        }
-
-        #closeBtn2:hover {
-            cursor: pointer;
-            color: var(--secondary);
-        }
-
-        #closeBtn3 {
-            color: var(--primary);
-            font-size: 2rem;
-            float: right;
-            margin: 10px;
-        }
-
-        #closeBtn3:hover {
-            cursor: pointer;
-            color: var(--secondary);
-        }
 
         /*MODAL CONTENT STYLES-------------------------------------------------------------------------------*/
 
@@ -223,6 +200,22 @@
         }
 
         .animation-attribute-card:hover {
+            cursor: pointer;
+            background: linear-gradient(var(--bg-light), var(--bg));
+        }
+
+        .zaliczenie-attribute-card {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            color: var(--text-muted);
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        .zaliczenie-attribute-card:hover {
             cursor: pointer;
             background: linear-gradient(var(--bg-light), var(--bg));
         }
@@ -262,6 +255,12 @@
             flex: 1 1 auto;
             min-height: 0;
         }
+        .modal-content4 {
+            display: none;
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
 
         div[id^="modalContent"] {
             color: var(--text);
@@ -271,6 +270,20 @@
             flex: 1 1 auto;
             min-height: 0;
             
+        }
+
+        #modalContent4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modalContent4 > .mergeBox {
+             background-color: var(--bg-light);
+             border-radius: 1rem;
+             margin: 15px;
+             border: 1px solid var(--border);
+             border-top-color: var(--highlight);
         }
 
         .required-property {
@@ -588,6 +601,10 @@
         
         .code {
             color: var(--highlight)
+        }
+
+        video {
+            width: 50vw;
         }
 
         /*ANIMATIONS-----------------------------------------------------------------------------------*/

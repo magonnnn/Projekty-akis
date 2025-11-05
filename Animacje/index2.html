@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        .square {
+            width: 50px;
+            aspect-ratio: 1/1;
+            background-color: black;
+        }
+
+        .bg {
+            background:linear-gradient(red,blue);
+            width: 300vw;
+            left: -150vw;
+            top: -150vw;
+            aspect-ratio: 1/1;
+            position: fixed;
+            z-index: -1;
+            animation: rotateBG 10s infinite linear;
+        }
+
+        @keyframes translate {
+            to {
+                transform: translate(50px);
+            }
+        }
+
+        @keyframes rotateBG {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes scale {
+            to {
+                transform: scale(1.2)
+            }
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes skew {
+            to {
+                transform: skew(30deg)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container"></div>
+    <script>
+        document.addEventListener("click", (e) => {
+            let mouseX = e.clientX
+            let mouseY = e.clientY
+            let container = document.getElementsByClassName("container")[0]
+            let square = document.getElementsByClassName("square")[0]
+            if(square) {
+                square.parentNode.removeChild(square)
+            }
+
+            const animationTypes = ["translate", "scale", "rotate", "skew"]
+            const randomColor1 = Math.floor(Math.random() * 256)
+            const randomColor2 = Math.floor(Math.random() * 256)
+            const randomColor3 = Math.floor(Math.random() * 256)
+
+            randomArray = Math.floor(Math.random() * 4)
+            randomAnimation = animationTypes[randomArray]
+            container.innerHTML += `<div class="square" style="animation: ${randomAnimation} 2s 1"></div>`
+
+            square = document.getElementsByClassName("square")[0]
+
+            square.style.backgroundColor = `rgb(${randomColor1},${randomColor2},${randomColor3})`
+
+            square.style.position = "relative"
+            square.style.top = `${mouseY}px`
+            square.style.left = `${mouseX}px`
+        })
+
+        element.parentNode.removeChild(element)
+    </script>
+</body>
+</html>

@@ -17,14 +17,13 @@
             width: 50px;
             height: 50px;
             background-color: black;
-            animation: matrix 5s 1 2s;
+            animation: test 5s 1 2s;
+            margin: 0 auto;
         }
 
         @keyframes test {
-            from {
-
-            } to {
-                transform: matrix(1, -0.3, 0, 1, 0, 50);
+            50% {
+                transform: rotate(30deg);
             }
         }
 
@@ -44,14 +43,6 @@
                 transform: rotate(0deg);
             } to {
                 transform: rotate(360deg);
-            }
-        }
-
-        @keyframes test {
-            from {
-                transform: rotate(0deg);
-            } to {
-                transform: rotate(360deg) translate(300px);
             }
         }
     </style>
