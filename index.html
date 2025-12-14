@@ -138,12 +138,36 @@
         }
 
         .discount {
-            width: 100%;
+            width: 95%;
             height: 100%;
-            background-color: red;
             border-radius: 1rem;
             margin: 5px 0px;
             transition: 0.1s;
+            padding: 10px;
+            color: white;
+            border: 3px solid red;
+            background-color: rgba(255, 0, 0, 0.2);
+        }
+
+        .discount > h3 {
+            font-size: 1.3em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .discount > p {
+            color: lightgray;
+            font-size: 1.1em;
+        }
+
+        .fly-away > h3 {
+            color: white;
+            font-size: 1.3em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .fly-away > p {
+            color: lightgray;
+            font-size: 1.1em;
         }
 
         .discount:hover {
@@ -157,19 +181,14 @@
         }
 
         .fly-away {
-            background-color: red;
+            background-color: rgba(255, 0, 0, 0.2);
+            border: 3px solid red;
             width: 100%;
             height: 100%;
             margin: 5px 0px;
             border-radius: 1rem;
-        }
-        
-        @keyframes fly-away {
-            100% {
-                opacity: 0;
-                height: 0%;
-                width: 0%;
-            }
+            padding: 10px;
+            width: 90%;
         }
 
         h1 {
@@ -178,7 +197,7 @@
         }
 
         .game > p {
-            color: white;
+            color: lightgray;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
@@ -279,38 +298,62 @@
         </header>
         <main>
             <aside>
-                <div class="discount"></div>
-                <div class="discount"></div>
-                <div class="discount"></div>
-                <div class="discount"></div>
-                <div class="discount"></div>
-                <div class="discount"></div>
+                <div class="discount">
+                    <h3>-50% Weekend Deal</h3>
+                    <p>Save big on selected action games.</p>
+                </div>
+                <div class="discount">
+                    <h3>Indie Spotlight</h3>
+                    <p>Hidden gems for low prices.</p>
+                </div>
+                <div class="discount">
+                    <h3>Multiplayer Sale</h3>
+                    <p>Best games to play with friends.</p>
+                </div>
+                <div class="discount">
+                    <h3>-50% Weekend Deal</h3>
+                    <p>Save big on selected action games.</p>
+                </div>
+                <div class="discount">
+                    <h3>Indie Spotlight</h3>
+                    <p>Hidden gems for low prices.</p>
+                </div>
+                <div class="discount">
+                    <h3>Multiplayer Sale</h3>
+                    <p>Best games to play with friends.</p>
+                </div>
             </aside>
             <section>
                 <div class="game">
                     <h1>Sea Of Thieves</h1>
-                    <p>Gra przygodowa PVP</p>
+                    <p>Open-world pirate adventure focused on exploration and PvP.</p>
                     <div class="game-button">Pobierz</div>
                 </div>
                 <div class="game">
                     <h1>Counter-Strike 2</h1>
-                    <p>Gra taktyczna PVP</p>
+                    <p>Competitive tactical shooter with ranked matchmaking.</p>
                     <div class="game-button">Pobierz</div>
                 </div>
                 <div class="game">
                     <h1>Grand Theft Auto 5</h1>
-                    <p>Gra indie</p>
+                    <p>Massive open-world action game with online mode.</p>
                     <div class="game-button">Pobierz</div>
                 </div>
                 <div class="game">
                     <h1>Roblox</h1>
-                    <p>Platforma z grami</p>
+                    <p>Platform with thousands of user-created games.</p>
                     <div class="game-button">Pobierz</div>
                 </div>
             </section>
             <aside>
-                <div class="fly-away"></div>
-                <div class="fly-away"></div>
+                <div class="fly-away">
+                    <h3>Top Rated</h3>
+                    <p>Players recommend these titles.</p>
+                </div>
+                <div class="fly-away">
+                    <h3>New Releases</h3>
+                    <p>Fresh games added every week.</p>
+                </div>
             </aside>
         </main>
         <footer></footer>
