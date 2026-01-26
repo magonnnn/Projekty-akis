@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Menu dark – wielopoziomowe</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'DM Sans','Roboto Mono',monospace; background:#0f0c1a; color:#e0e0e0; }
+
+/* HEADER */
+header { background:#1a0f2f; color:#d8c8f0; padding:25px 30px; }
+header h1 { font-size:26px; }
+header p { font-size:14px; opacity:0.8; margin-top:5px; }
+
+/* BUTTON */
+.controls { padding:20px; }
+button { padding:10px 16px; cursor:pointer; background:#2b1a3c; border:1px solid #3d2b57; border-radius:6px; color:#e0e0e0; font-family:inherit; transition:background 0.3s; }
+button:hover { background:#3d2b57; }
+
+/* LAYOUT */
+.layout { padding:0 20px 20px; }
+.layout.vertical { display:flex; gap:30px; align-items:flex-start; }
+
+/* MENU */
+nav { user-select:none; }
+nav ul { list-style:none; display:flex; background:#1a132f; border-radius:8px; }
+.layout.vertical nav ul { flex-direction:column; width:280px; }
+nav li { position:relative; }
+nav a { display:flex; justify-content:space-between; align-items:center; padding:14px 18px; color:#e0e0e0; text-decoration:none; transition: background 0.3s, padding-left 0.3s; }
+nav a:hover { background:#3d2b57; padding-left:24px; }
+nav li.has-children > a::after { content:"▸"; transition: transform 0.3s; }
+nav li.open > a::after { transform: rotate(90deg); }
+
+/* SUBMENU */
+nav ul ul { 
+    position:absolute; top:100%; left:0; 
+    background:#1a0f2f; min-width:220px; flex-direction:column; border-radius:6px; border:1px solid #3d2b57;
+    visibility:hidden; opacity:0; transition:opacity 0.3s;
+}
+/* Poziome hover */
+nav:not(.vertical) li:hover > ul { visibility:visible; opacity:1; }
+/* Wielopoziomowe poziome */
+nav:not(.vertical) ul ul li { position:relative; }
+nav:not(.vertical) ul ul li:hover > ul { visibility:visible; opacity:1; top:0; left:100%; }
+
+/* PIONOWE ACCORDION */
+nav.vertical ul ul { position:static; margin-left:16px; border-left:3px solid #3d2b57; visibility:visible; opacity:1; display:none; }
+nav.vertical li.open > ul { display:flex; }
+
+/* TREŚĆ */
+main { max-width:900px; }
+.layout.vertical main { flex:1; max-width:none; }
+section { background:#1a132f; padding:30px; margin-bottom:40px; border-radius:10px; }
+section h2 { color:#d8c8f0; margin-bottom:10px; }
+section p { color:#c5b4e0; line-height:1.6; }
+
+main {
+    max-width: 900px;
+    margin-top: 20px; /* <-- tu dodany margines od góry */
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>Menu dark – wielopoziomowe</h1>
+<p>Poziome z dropdown, pionowe z accordionem</p>
+</header>
+
+<div class="controls">
+<button id="toggleMenu">Przełącz menu (poziome / pionowe)</button>
+</div>
+
+<div class="layout" id="layout">
+<nav id="menu">
+<ul>
+    <li><a>Start</a></li>
+    <li class="has-children">
+        <a>Oferta</a>
+        <ul>
+            <li class="has-children">
+                <a>Strony WWW</a>
+                <ul>
+                    <li class="has-children">
+                        <a>Frontend</a>
+                        <ul>
+                            <li><a>HTML</a></li>
+                            <li><a>CSS</a></li>
+                            <li><a>JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a>Backend</a>
+                        <ul>
+                            <li><a>Node.js</a></li>
+                            <li><a>PHP</a></li>
+                            <li><a>Python</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a>E-commerce</a></li>
+            <li><a>Marketing</a></li>
+        </ul>
+    </li>
+    <li class="has-children">
+        <a>O nas</a>
+        <ul>
+            <li><a>Historia</a></li>
+            <li><a>Zespół</a></li>
+            <li class="has-children">
+                <a>Biura</a>
+                <ul>
+                    <li><a>Warszawa</a></li>
+                    <li><a>Kraków</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a>Kontakt</a></li>
+</ul>
+</nav>
+
+<main>
+<section><h2>Start</h2><p>Content tylko dla zasady.</p></section>
+<section><h2>HTML</h2><p>Content tylko dla zasady.</p></section>
+<section><h2>CSS</h2><p>Content tylko dla zasady.</p></section>
+<section><h2>JS</h2><p>Content tylko dla zasady.</p></section>
+<section><h2>E-commerce</h2><p>Content tylko dla zasady.</p></section>
+<section><h2>Marketing</h2><p>Content tylko dla zasady.</p></section>
+<section><h2>O nas</h2><p>Content tylko dla zasady.</p></section>
+<section><h2>Kontakt</h2><p>Content tylko dla zasady.</p></section>
+</main>
+</div>
+
+<script>
+const menu = document.getElementById("menu");
+const layout = document.getElementById("layout");
+const button = document.getElementById("toggleMenu");
+
+button.addEventListener("click", () => {
+    menu.classList.toggle("vertical");
+    layout.classList.toggle("vertical");
+    menu.querySelectorAll(".open").forEach(el => el.classList.remove("open"));
+});
+
+// accordion w menu pionowym
+menu.addEventListener("click", e => {
+    const link = e.target.closest("a");
+    if(!link) return;
+    const li = link.parentElement;
+    if(!li.classList.contains("has-children")) return;
+    if(menu.classList.contains("vertical")) {
+        e.preventDefault();
+        li.classList.toggle("open");
+    }
+});
+</script>
+
+</body>
+</html>
